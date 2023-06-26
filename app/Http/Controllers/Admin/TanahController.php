@@ -9,9 +9,17 @@ use Illuminate\Http\Request;
 
 class TanahController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = Tanah::paginate(5);
+        $pemilik = $request->pemilik;
+        $nomor = $request->nomor;
+        $data = Tanah::query()
+            ->where('nomor', "like", "%" . $nomor . "%")
+            ->where('nama_terbaru', 'like', '%' . $pemilik . '%')
+            ->orWhere('nama_sebelumnya', "like", "%" . $pemilik . "%")
+            ->paginate(5);
+
+        // dd($data);
         return view('admin.tanah.index', compact('data'));
     }
 
@@ -23,7 +31,7 @@ class TanahController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            // 'nomor' => 'required',
+            'nomor' => 'required',
             'alamat' => 'required',
             'luas_tanah' => 'required|integer',
             'luas_bangunan' => 'required|integer',
@@ -40,7 +48,7 @@ class TanahController extends Controller
         }
 
         $tanah = Tanah::create([
-            // 'nomor' => $request->nomor,
+            'nomor' => $request->nomor,
             'luas_tanah' => $request->luas_tanah,
             'luas_bangunan' => $request->luas_bangunan,
             'alamat' => $request->alamat,

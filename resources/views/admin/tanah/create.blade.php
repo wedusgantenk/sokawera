@@ -15,7 +15,7 @@
                     <form action="{{ route('admin.tanah.store') }}" method="POST">
                         @csrf
                         <div class="row">
-                            {{-- <div class="col-md-4">
+                            <div class="col-md-2">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Nomor <small
                                             class="text-danger">* wajib di isi</small></label>
@@ -27,12 +27,12 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div> --}}
+                            </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Luas Tanah <small
-                                            class="text-danger">* wajib di isi</small></label>
+                                            class="text-danger">* wajib</small></label>
                                     <input type="number" class="form-control @error('luas_tanah') is-invalid @enderror"
                                         id="basic-default-fullname" name="luas_tanah" placeholder="E.g 10000">
                                     @error('luas_tanah')
@@ -43,10 +43,10 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Luas Bangunan <small
-                                            class="text-danger">* wajib di isi</small></label>
+                                            class="text-danger">* wajib</small></label>
                                     <input type="number" class="form-control @error('luas_bangunan') is-invalid @enderror"
                                         id="basic-default-fullname" name="luas_bangunan" placeholder="E.g 1000">
                                     @error('luas_bangunan')
