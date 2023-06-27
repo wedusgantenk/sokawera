@@ -64,6 +64,13 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        <div class="mt-4">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-primary justify-content-center">
+                                    {!! $data->links() !!}
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>

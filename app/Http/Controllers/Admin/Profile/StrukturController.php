@@ -103,3 +103,9 @@ class StrukturController extends Controller
         return redirect()->route('admin.struktur.index')->with('success', 'Struktur berhasil dihapus');
     }
 }
+
+
+// - Logo 
+// - Print Excell
+// - Paginate Struktur
+// - gambar profile admin
