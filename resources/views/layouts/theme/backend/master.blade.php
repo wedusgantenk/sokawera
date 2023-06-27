@@ -12,7 +12,7 @@
 
     <meta name="description" content="" />
 
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
 
     <!-- Fonts -->
@@ -69,7 +69,7 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="{{ asset('assets/img/avatars/1.png') }}" alt
+                                        <img src="{{ asset('assets/avatar.png') }}" alt
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
@@ -79,7 +79,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="{{ asset('assets/img/avatars/1.png') }}" alt
+                                                        <img src="{{ asset('assets/avatar.png') }}" alt
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
