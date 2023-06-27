@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Geolocation;
 use App\Models\Tanah;
 use Illuminate\Http\Request;
+use Rap2hpoutre\FastExcel\FastExcel;
 
 class TanahController extends Controller
 {
@@ -21,6 +22,23 @@ class TanahController extends Controller
 
         // dd($data);
         return view('admin.tanah.index', compact('data'));
+    }
+
+    public function export()
+    {
+        $file = time() . '-Data Excell.xlsx';
+        return (new FastExcel(Tanah::all()))->download($file, function ($tanah) {
+            return [
+                'Nomor' => $tanah->nomor,
+                'Pemilik Terbaru' => $tanah->nama_terbaru,
+                'Pemilik Sebelumnya' => $tanah->nama_sebelumnya,
+                'Luas Tanah' => $tanah->luas_tanah,
+                'Luas Bangunan' => $tanah->luas_bangunan,
+                'Keterangan' => $tanah->keterangan,
+                'Perubahan' => $tanah->perubahan,
+                'Alamat' => $tanah->alamat,
+            ];
+        });
     }
 
     public function create()

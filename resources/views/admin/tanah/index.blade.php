@@ -11,17 +11,18 @@
                 <h5 class="card-header">@yield('title')</h5>
                 <div class="card-body">
                     <form action="" class="row">
-                        <div class="mb-3 col-md-5">
+                        <div class="mb-3 col-md-4">
                             <label for="" class="form-label">Cari Nomor</label>
                             <input type="text" placeholder="nomor rumah" name="nomor" class="form-control">
                         </div>
-                        <div class="mb-3 col-md-5">
+                        <div class="mb-3 col-md-4">
                             <label for="" class="form-label">Cari Pemilik</label>
                             <input type="text" placeholder="pemilik" name="pemilik" class="form-control">
                         </div>
-                        <div class="mb-3 col-md-2">
+                        <div class="mb-3 col-md-4">
                             <button type="submit" class="btn btn-primary mt-4">Cari</button>
                             <a href="{{ route('admin.tanah.index') }}" class="btn btn-danger mt-4">Reset</a>
+                            <a href="{{ route('admin.tanah.export') }}" class="btn btn-outline-info mt-4">Export Excel</a>
                         </div>
                     </form>
                     <div class="table-responsive text-nowrap">
