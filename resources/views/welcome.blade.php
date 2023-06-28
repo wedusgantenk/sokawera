@@ -453,7 +453,7 @@
             $("#keterangan").text(keterangan);
             $("#perubahan").text(perubahan);
             $("#tanah").text(objek_tanah);
-            $("#bangunan").text(objek_tanah);
+            $("#bangunan").text(objek_bangunan);
             $("#alamat").text(alamat);
         }
 
