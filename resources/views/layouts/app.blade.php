@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('assets/logo.png') }}" alt="Bootstrap" width="80" height="60">
+                <img src="{{ asset('assets/logo.png') }}" alt="Bootstrap" width="123" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
                 @guest
-                    <a href="{{ route('login') }}" class="btn btn-primary">Login Account</a>
+                    <a href="{{ route('login') }}" class="btn btn-primary">Login Admin</a>
                 @else
                     <a href="{{ route('dashboard') }}" class="btn btn-primary">Dashboard</a>
                 @endguest
@@ -68,8 +68,8 @@
                 <div class="mt-4 p-5 bg-primary text-white jumbo"
                     style="background: url({{ asset('assets/backgroud.jpg') }})">
                     <img src="{{ asset('assets/banyumas.png') }}" width="80" class="mb-3" alt="">
-                    <h2>Website Desa</h2>
-                    <p>Kec Purwokerto Selatan, Kab Banyumas</p>
+                    <h2>Website Desa Sokawera</h2>
+                    <p>Kec. Patikraja, Kab Banyumas</p>
                 </div>
             </div>
         </header>
@@ -85,8 +85,8 @@
     <footer class="text-center text-lg-start text-muted bg-body-tertiary">
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2022 Copyright Made With ♥
-            <a class="text-reset" href="/">Purwokerto</a>
+            ©2023 Copyright Made With ♥
+            <a class="text-reset" href="/">KKN-T IT Telkom Purwokerto</a>
         </div>
         <!-- Copyright -->
     </footer>

@@ -115,7 +115,7 @@
                                     d="M38.5745 19.4812C38.4714 19.3816 38.4345 19.2331 38.4655 19.0932C38.5261 18.8198 38.5576 18.5112 38.5576 18.1632C38.5576 16.4799 37.1743 15.5171 35.6313 14.4432C34.5164 13.6673 33.3182 12.8333 32.4983 11.6275C32.2037 11.1942 31.1299 11.1942 30.8353 11.6275C30.0154 12.8333 28.8171 13.6673 27.7023 14.4432C26.1593 15.5171 24.776 16.4799 24.776 18.1632C24.776 18.5109 24.8075 18.8192 24.868 19.0925C24.899 19.2327 24.862 19.3814 24.7588 19.4812C24.7588 19.4811 24.7588 19.4812 24.7588 19.4812C24.1118 20.1059 24.5541 21.2005 25.4534 21.2005H37.8798C38.7792 21.2005 39.2214 20.1059 38.5745 19.4812C38.5744 19.4812 38.5745 19.4812 38.5745 19.4812Z"
                                     fill="#d1ac11"></path>
                             </svg>
-                            <p class="mb-0">Magrib</p>
+                            <p class="mb-0">Maghrib</p>
                         </div>
                         <h4 class="text-muted text-center" id="magrib">00.00</h4>
                     </div>
@@ -221,7 +221,7 @@
                     <div class="card p-3 rounded-15">
                         <div class="card-body">
                             <div class="card-title mb-0">
-                                <h5 class="m-0 me-2">Data Penduduk</h5>
+                                <h5 class="m-0 me-2">Data Jumlah Penduduk</h5>
                                 <small class="text-muted">Total {{ number_format($total_penduduk) }} Jiwa</small>
                             </div>
                             <hr>
@@ -249,9 +249,8 @@
                     <div class="card p-3 rounded-15">
                         <div class="card-body">
                             <div class="card-title mb-0">
-                                <h5 class="m-0 me-2">Data Pekerjaan</h5>
-                                <small class="text-muted">Total {{ number_format($total_pekerjaan) }} Jenis
-                                    Pekerjaan</small>
+                                <h5 class="m-0 me-2">Data Jumlah Penduduk Menurut Pekerjaan</h5>
+                                <small class="text-muted">Total {{ number_format($total_pekerjaan) }} Jumlah Penduduk</small>
                             </div>
                             <hr>
                             <ul class="p-0 m-0 mt-4">
@@ -278,9 +277,8 @@
                     <div class="card p-3 rounded-15">
                         <div class="card-body">
                             <div class="card-title mb-0">
-                                <h5 class="m-0 me-2">Data Pendidikan</h5>
-                                <small class="text-muted">Total {{ number_format($total_pendidikan) }} Type
-                                    Pendidikan</small>
+                                <h5 class="m-0 me-2">Data Lulusan Pendidikan</h5>
+                                <small class="text-muted">Total {{ number_format($total_pendidikan) }} Lulusan Pendidikan</small>
                             </div>
                             <hr>
                             <ul class="p-0 m-0 mt-4">
@@ -307,8 +305,8 @@
                     <div class="card p-3 rounded-15">
                         <div class="card-body">
                             <div class="card-title mb-0">
-                                <h5 class="m-0 me-2">Data agama</h5>
-                                <small class="text-muted">Total {{ number_format($total_agama) }} Type Agama</small>
+                                <h5 class="m-0 me-2">Data Pemeluk Agama</h5>
+                                <small class="text-muted">Total {{ number_format($total_agama) }} Pemeluk Agama</small>
                             </div>
                             <hr>
                             <ul class="p-0 m-0 mt-4">
@@ -421,7 +419,7 @@
     <script type="text/javascript">
         L.mapbox.accessToken =
             'pk.eyJ1Ijoib2phbmFscGhhIiwiYSI6ImNreHR0ZGp1MzVuZGcyemt5MHg3Z2t4eHQifQ.peGpGa_e1Bs4amUI5AsDWQ';
-        const map = L.map('map').setView([{{ env('MAP_LATITUDE') }}, {{ env('MAP_LONGITUDE') }}], 15);
+        const map = L.map('map').setView([-7.488808, 109.2484411], 15);
 
         const tiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L
             .mapbox.accessToken, {
@@ -477,7 +475,7 @@
                 <td>{{ $total_penduduk }} Jiwa&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;Pekerjaan</td>
+                <td>&nbsp;Jenis Pekerjaan</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</td>
                 <td>&nbsp;{{ count($pekerjaan) }}</td>
             </tr>
@@ -487,7 +485,7 @@
                 <td>&nbsp;{{ count($agama) }}</td>
             </tr>
             <tr>
-                <td>&nbsp;Jumlah Pendidikan</td>
+                <td>&nbsp;Jumlah Jenis Pendidikan</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</td>
                 <td>&nbsp;{{ count($pendidikan) }}</td>
             </tr>
